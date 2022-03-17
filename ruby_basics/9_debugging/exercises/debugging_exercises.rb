@@ -1,5 +1,3 @@
-# debugging_exercises.rb
-
 require 'pry-byebug'
 
 # First, we're going to practice reading the Stack Trace
@@ -59,6 +57,6 @@ end
 def yell_greeting(string)
   binding.pry
   name = string
-  name = name.downcase
+  name = name.upcase
   greeting = "WASSAP, #{name}!"
 end
