@@ -47,11 +47,9 @@ def count_empty_seats(chart)
   # take a chart and return the number of empty (nil) seats in it
 
   # NOTE: `chart` should **not** be mutated
-  empty_seats = 0
-  chart.each do |row|
-    empty_seats += row.count(nil)
+  chart.reduce(0) do |agg, row|
+    agg + row.count(nil)
   end
-  empty_seats
 end
 
 def find_favorite(array_of_hash_objects)
